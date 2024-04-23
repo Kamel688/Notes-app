@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/6ee12b0358.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <p class="menu__text">Menu</p>
+            <button class="menu__add-btn"><i class="fa-solid fa-plus"></i></button>
+            <button class="menu__remove-btn"><i class="fa-solid fa-trash-can"></i></button>
+            <button class="menu__sort-btn"><i class="fa-solid fa-sort"></i></button>
+        </div>
+        <div class="note">
+            <div class="note__search">
+                <input type="text" class="note__search-engine" placeholder="Szukaj notatki">
+                <button class="note__search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <h1 class="note__header">Notes</h1>
+            <div class="note__items">
+                <!-- <div class="note__item">
+                    <h2 class="note__item-title">Zakupy</h2>
+                    <p class="note__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quis vero ipsa, neque accusantium odit cupiditate unde ullam nisi quae iusto illo similique. Ut eius, dolore sit hic aliquid reprehenderit.</p>
+                    <p class="note__item-date">15 maj 2023</p>
+                    <button class="note__item-btn note__item-btn-remove"><i class="fa-solid fa-xmark"></i></button>
+                    <button class="note__item-btn note__item-btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                   
+                </div> -->
+               
+            </div>
+            
+        </div>
+        <div class="panel">
+            <h2 class="panel__header">Dodaj notatkę</h2>
+            <label for="title">Wprowadź tytuł</label>
+            <input type="text" name="title" class="panel__title">
+            <label for="color">Wybierz kolor</label>
+            <input type="color" name="color" class="panel__color" value="#e66465">
+            <label for="content">Wprowadź treść</label>
+            <textarea name="content" id="" cols="30" rows="10" maxlength="200" class="panel__content"></textarea>
+            <p class="panel__content-length"><span class="panel__content-length-left">0</span>/200</p>
+            <p class="panel__error">Pola nie mogą być puste</p>
+            <div class="panel__btns">
+                <button class="panel__btn panel__btn--save"><i class="fa-solid fa-floppy-disk"></i> Zapisz</button>
+                <button class="panel__btn panel__btn--edit"><i class="fa-solid fa-floppy-disk"></i> Edytuj</button>
+                <button class="panel__btn panel__btn--cancel"><i class="fa-regular fa-rectangle-xmark"></i> Anuluj</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

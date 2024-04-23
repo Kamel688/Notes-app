@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  height: 100%;
+  border-right: 1px solid #d1d1d1;
+}
+.menu button {
+  margin-bottom: 1.2em;
+  min-width: 50px;
+  min-height: 50px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.menu__text {
+  margin-top: 0.4em;
+  margin-bottom: 1.2em;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.menu__add-btn {
+  background-color: mediumseagreen;
+}
+.menu__add-btn:hover {
+  background-color: #0aa040;
+}
+.menu__remove-btn {
+  background-color: red;
+}
+.menu__remove-btn:hover {
+  background-color: #dd0000;
+}
+.menu__sort-btn {
+  background-color: #4faaff;
+}
+.menu__sort-btn:hover {
+  background-color: #1a90ff;
+}
+
+.note {
+  width: 100%;
+  padding: 2.5em;
+  word-wrap: break-word;
+}
+.note__search {
+  position: relative;
+}
+.note__search-engine {
+  padding: 0.8em 2.2em;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.4rem;
+}
+.note__search-engine-active {
+  transform: scaleX(1);
+}
+.note__search-btn {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: #d4d4d4;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.note__header {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0.2em;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.note__items {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.note__item {
+  position: relative;
+  padding: 1em 1.5em;
+  margin: 0 1em;
+  margin-bottom: 2em;
+  width: 100%;
+  max-width: 250px;
+  font-size: 1.4rem;
+  background-color: tomato;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.note__item .fa-solid {
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+.note__item:hover {
+  transform: scale(0.98);
+}
+.note__item:hover .fa-solid {
+  opacity: 1;
+}
+.note__item-title {
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+.note__item-text {
+  margin-bottom: 0.5em;
+}
+.note__item-date {
+  font-weight: bold;
+}
+.note__item-btn {
+  position: absolute;
+  right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.note__item-btn-remove {
+  top: 10px;
+  font-size: 2.5rem;
+}
+.note__item-btn-edit {
+  bottom: 10px;
+  font-size: 2.2rem;
+}
+.note__hide {
+  display: none;
+}
+
+.panel {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  min-width: 600px;
+  background-color: white;
+  box-shadow: 0 0 10px black;
+  font-size: 1.6rem;
+  border-radius: 5px;
+}
+.panel__show {
+  display: flex;
+}
+.panel__color {
+  padding: 0.1em;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+.panel__header {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+.panel__error {
+  margin-top: 0.7em;
+  color: red;
+  visibility: hidden;
+}
+.panel__show-error {
+  visibility: visible;
+}
+.panel__content-length {
+  margin-top: 0.2em;
+  margin-right: 0.5em;
+  color: #aaaaaa;
+  align-self: flex-end;
+}
+.panel__btns {
+  margin-top: 0.8em;
+}
+.panel__btn {
+  padding: 0.9em 1.8em;
+  margin: 0 0.7em;
+  border-radius: 5px;
+  border: none;
+  background: none;
+  border: 1px solid #999;
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.panel__btn i {
+  color: black;
+}
+.panel__btn--save, .panel__btn--edit {
+  background-color: mediumseagreen;
+}
+.panel__btn--edit {
+  display: none;
+}
+.panel__btn-hide {
+  display: none;
+}
+.panel__btn-active {
+  display: inline;
+}
+.panel__btn--cancel {
+  background-color: tomato;
+}
+.panel label {
+  margin: 0.7em 0;
+}
+.panel input:not(.panel__color) {
+  padding: 0.7em 1em;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.panel textarea {
+  padding: 0.6em;
+  width: 100%;
+  resize: vertical;
+  max-height: 300px;
+  min-height: 175px;
+  font-size: 1.5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}/*# sourceMappingURL=main.css.map */
